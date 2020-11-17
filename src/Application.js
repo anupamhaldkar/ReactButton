@@ -2,7 +2,11 @@ import React, {Component} from 'react';
 
 class Application extends Component {
 render(){
-    return( <h1>Hello World</h1>
+    
+    return( <div>
+           <h1>Hello World</h1>
+            <span>This is ES6</span>
+            </div>
     );
 }
 }
