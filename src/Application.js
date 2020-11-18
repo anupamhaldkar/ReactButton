@@ -10,6 +10,21 @@ class Application extends Component {
     componentWillMount(props, state){
         
     }
+
+    componentWillReceiveProps(props){
+
+    }
+
+    componentWillUpdate(props, state){
+        if(this.props.name!== props.name){
+            //do some
+        }
+    }
+
+    componentDidUpdate(props, state){
+
+    }
+
 render(){
     let name = "Anupam";
     return( <div>
