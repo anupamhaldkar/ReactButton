@@ -9,9 +9,13 @@ class Application extends Component {
         }
     }
     handleClick = () => {
-        console.log("Clicked");
+        this.setState({count:this.state.count + 1})
+        
     }
 
+    componentDidUpdate(props, state){
+        console.log("Updated from ", state, "to", this.state);
+    }
 
 render(){
     let {count} = this.state ;
