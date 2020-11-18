@@ -8,7 +8,9 @@ class Application extends Component {
             count:0
         }
     }
-    
+    handleClick = () => {
+        console.log("Clicked");
+    }
 
 
 render(){
@@ -16,7 +18,7 @@ render(){
     return( <div>
            <h1>You clicked the Button {count} times</h1>
             <span>
-                <button>Click Me📣</button>
+                <button onClick={(e)=>this.handleClick()}>Click Me📣</button>
             </span>
             </div>
     );
