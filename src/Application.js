@@ -15,7 +15,7 @@ class Application extends Component {
     }
 
     componentDidUpdate(props, state){
-       if(this.state.count>10 && this.state.count!== state.count){
+       if(this.state.count>10 && this.state.count!== state.count&& !this.state.overTen){
            console.log("Updating overTen");
            this.setState({overTen:true});
        }
