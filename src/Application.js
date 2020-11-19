@@ -5,7 +5,8 @@ class Application extends Component {
         super(props);
 
         this.state={
-            count:0
+            count:0,
+            overTen:false
         }
     }
     handleClick = () => {
@@ -14,13 +15,21 @@ class Application extends Component {
     }
 
     componentDidUpdate(props, state){
-        console.log("Updated from ", state, "to", this.state);
+       if(this.state.count>10 && this.state.count!== state.count){
+           console.log("Updating overTen");
+           this.setState({overTen:true});
+       }
     }
 
 render(){
     let {count} = this.state ;
     return( <div>
            <h1>You clicked the Button {count} times</h1>
+           {
+               (this.state.overTen)?
+               <h3>Beat High score of 10!</h3>
+               :null
+           }
             <span>
                 <button onClick={(e)=>this.handleClick()}>Click Me📣</button>
             </span>
