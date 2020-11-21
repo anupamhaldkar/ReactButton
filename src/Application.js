@@ -37,7 +37,7 @@ render(){
            <h1>You clicked the Button {count} times</h1>
             <HighScore 
                 overTen={this.state.overTen}
-                onReset={(e) => this.resetCount(e)}
+                onReset={this.resetCount}
             />
             <span>
                 <button onClick={(e)=>this.handleClick()}>Click Me📣</button>
