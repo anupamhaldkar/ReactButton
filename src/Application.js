@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import HighScore from './HighScore';
+import './css/style.css';
 
 class Application extends Component {
     constructor(props){
@@ -26,7 +27,7 @@ class Application extends Component {
         this.setState(
             {
                 count:0,
-                overTen:false
+                overTen:false 
             }
         );
     }
