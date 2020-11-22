@@ -22,12 +22,22 @@ class Application extends Component {
        }
     }
 
+    resetCount = (e) => {
+        this.setState(
+            {
+                count:0,
+                overTen:false
+            }
+        );
+    }
+
 render(){
     let {count} = this.state ;
     return( <div>
            <h1>You clicked the Button {count} times</h1>
             <HighScore 
                 overTen={this.state.overTen}
+                onReset={(e) => this.resetCount(e)}
             />
             <span>
                 <button onClick={(e)=>this.handleClick()}>Click Me📣</button>
